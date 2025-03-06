@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zyionn xalv</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 300px;
+            margin: 20px 0;
+        }
+        #datetime {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        a {
+            display: block;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: lightblue;
+        }
+        .photo-boxes {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        iframe {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: none;
+        }
+        .volume-control {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        .volume-control input {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100px;
+            height: 5px;
+            background: white;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        /* Added CSS for social media links side by side */
+        .social-links {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('datetime').innerText = now.toLocaleString();
+        }
+        setInterval(updateDateTime, 1000);
+        
+        function setVolume(value) {
+            document.getElementById('bg-music').volume = value;
+        }
+    </script>
+</head>
+<body onload="updateDateTime()">
+    <div class="volume-control">
+        <span>Volume:</span> <input type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume(this.value)">
+    </div>
+    
+    <audio id="bg-music" autoplay loop>
+        <source src="/mnt/data/One Night Only (1).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <iframe src="https://www.youtube.com/embed/vNBNIce9XDM?autoplay=1&loop=1&playlist=vNBNIce9XDM" allow="autoplay"></iframe>
+    
+    <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.15752-9/482680100_994818698746163_9182397615410699763_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=V5zE4Yp5p6UQ7kNvgGazlN5&_nc_oc=AdgDdheW1RtaBqpEFJ35bMQSJckvpTCYJMkSIrqwUvftcTXQEeb36HAJ3ZmiF4W88e-1nVIsJcNwj7L3xPUfAigc&_nc_ad=z-m&_nc_cid=1087&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&oh=03_Q7cD1wEtB8OuenZVAlfwhvp0osVpoNdOEFghZkRd7B4f2kiEuQ&oe=67F19B75" alt="Logo">
+    
+    <div id="datetime"></div>
+    
+    <a href="https://www.instagram.com/zyi.photos/" target="_blank">GALLERY</a>
+    <a href="mailto:zxalvv@gmail.com">CONTACT</a>
+    <a href="#">MY FAVORITES</a>
+
+    <div class="photo-boxes">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <!-- Social media links side by side (names) -->
+    <div class="social-links">
+        <a href="https://www.instagram.com/zyirakkal/" target="_blank">Instagram</a>
+        <a href="https://discord.gg/7BpCtxzw" target="_blank">Discord</a>
+        <a href="https://www.tiktok.com/@zy1rakkal?_t=ZT-8uT7E3Nit6h&_r=1" target="_blank">TikTok</a>
+        <a href="https://www.youtube.com/@zyyionn" target="_blank">YouTube</a>
+    </div>
+</body>
+</html>
